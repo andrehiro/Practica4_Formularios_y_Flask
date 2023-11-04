@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Ladridos y Colas</title>
+</head>
+
+<body>
+    <header >
+        <h1 id="titulo" >Ladridos y Colas</h1>
+    </header>
+    <div id="body_sin_header">
+        <main>
+            <a href="{{ url_for('pagina1') }}">Razas de perros mas
+                populares</a>
+            <p>Explora el mundo de las razas de perros más populares: Descubre sus Características
+                y Cualidades Únicas. ¡Encuentra el compañero canino perfecto para tu estilo de vida!"</p>
+            <a href="{{ url_for('pagina2') }}">Consejos para cuidar la salud
+                de tu mascota</a>
+            <p>Descubre cómo brindar el mejor cuidado a tu compañero de cuatro patas. Te comparto
+                valiosos consejos sobre alimentación, salud, entrenamiento y mucho más para garantizar que tu perro viva
+                una vida feliz y saludable.</p>
+            <a href="{{ url_for('pagina3') }}">Tecnicas para entrenar a tu
+                perro</a>
+            <p>Domina el arte del adiestramiento canino con nuestras técnicas. Desde el
+                adiestramiento básico hasta solucionar comportamientos no deseados, este artículo te brinda las
+                herramientas necesarias para establecer una comunicación efectiva con tu perro. </p>
+        </main>
+        <aside>
+            <article>
+                <h2 class="subtitulo">Acerca de mí</h2>
+                <p>¡Hola! soy Andre, el autor detrás de Colas y Ladridos. Desde pequeño, he
+                    tenido una profunda afinidad por los perros. Soy un estudiante de sistemas y tambien
+                    me gusta ver series,peliculas y jugar.</p>
+            </article>
+            <article>
+                <h2 class="subtitulo">Suscríbete</h2>
+                <input type="text" name="nombre" placeholder="Introduce tu correo electronico">
+                <button type="button">Enviar</button>
+            </article>
+        </aside>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="subtitulo">Razas de perros</h2>
+                    <div class="carousel center-align">
+                        <div class="carousel-item">
+                            <h3>Shiba</h3>
+                         <img src="{{ url_for('static', filename='imgs/shiba.jpg') }}" alt="imagen">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Husky</h3>
+                         <img src="{{ url_for('static', filename='imgs/husky.webp') }}" alt="imagen">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Salchicha</h3>
+                         <img src="{{ url_for('static', filename='imgs/salchicha.jpg') }}" alt="imagen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>Andre Hidrogo 2023</footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </div>
+</body>
+
+</html>
